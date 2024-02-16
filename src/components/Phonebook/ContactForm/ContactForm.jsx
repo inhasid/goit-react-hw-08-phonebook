@@ -40,11 +40,17 @@ const ContactForm = () => {
     <form id="myForm" onSubmit={handleSubmit} className={styles.form}>
       <div className={styles.formGroup}>
         <label htmlFor="name">Name</label>
-        <input type="text" name="name" required placeholder="Name" />
+        <input type="text" name="name" required placeholder="Name" id="name" />
       </div>
       <div className={styles.formGroup}>
         <label htmlFor="number">Number</label>
-        <input type="tel" name="number" required placeholder="Number" />
+        <input
+          type="tel"
+          name="number"
+          required
+          placeholder="Number"
+          id="number"
+        />
       </div>
       <button type="submit">Add contact</button>
     </form>
