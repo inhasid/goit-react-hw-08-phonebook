@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import NavbarMenu from './NavbarMenu/NavbarMenu';
@@ -10,9 +9,6 @@ import styles from './navbar.module.css';
 
 const Navbar = () => {
   const isLogin = useSelector(selectIsLogin);
-  // const filteredMenuItems = !isLogin
-  //   ? menuItems.filter(item => !item.private)
-  //   : menuItems;
 
   return (
     <navbar className={styles.block}>
