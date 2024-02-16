@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/653.f906b6ba.chunk.css","mappings":"AAAA,2BAEE,kBAAmB,CADnB,YAAa,CAEb,kBACF,CAEA,iCACE,UACF","sources":["components/SignUpForm/sign-up-form.module.css"],"sourcesContent":[".block {\n  display: flex;\n  align-items: center;\n  margin-bottom: 15px;\n}\n\n.block label {\n  width: 80px;\n}\n"],"names":[],"sourceRoot":""}
