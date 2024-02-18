@@ -1,18 +1,15 @@
 import axios from 'axios';
 
-const contactsInstance = axios.create({
-  baseURL: 'https://connections-api.herokuapp.com',
-});
-
+import authInstance from './auth-api';
 export const requestContacts = async () => {
-  const { data } = await contactsInstance.get('/contacts');
+  const { data } = await authInstance.get('/contacts');
   return data;
 };
-export const requestAddContact = async body => {
-  const { data } = await contactsInstance.post('/contacts', body);
+export const requestAddContact = async newContact => {
+  const { data } = await authInstance.post('/contacts', newContact);
   return data;
 };
-export const requestDeleteContact = async id => {
-  const { data } = await contactsInstance.delete(`/contacts/${id}`);
+export const requestDeleteContact = async contactId => {
+  const { data } = await authInstance.delete(`/contacts/${contactId}`);
   return data;
 };
