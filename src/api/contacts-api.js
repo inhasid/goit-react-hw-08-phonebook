@@ -1,6 +1,5 @@
-import axios from 'axios';
-
 import authInstance from './auth-api';
+
 export const requestContacts = async () => {
   const { data } = await authInstance.get('/contacts');
   return data;
