@@ -9,6 +9,7 @@ const setToken = token => {
     return (authInstance.defaults.headers.authorization = `Bearer ${token}`);
   }
   authInstance.defaults.headers.authorization = '';
+  console.log(authInstance.defaults.headers.authorization);
 };
 
 export const signupRequest = async body => {
@@ -25,6 +26,7 @@ export const currentRequest = async token => {
   setToken(token);
   try {
     const { data } = await authInstance.get('/users/current');
+    console.log(data);
     return data;
   } catch (error) {
     setToken();

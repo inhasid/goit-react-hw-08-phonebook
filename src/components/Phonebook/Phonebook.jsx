@@ -7,9 +7,9 @@ import styles from './phonebook.module.css';
 const Phonebook = () => {
   return (
     <div className={styles.wrapper}>
-      <h1>Phonebook</h1>
+      <h1 className={styles.title}>Phone book</h1>
       <ContactForm />
-      <h2>Contacts</h2>
+      <h2 className={styles.h2}>Contacts</h2>
       <FilterInput />
       <ContactList />
     </div>

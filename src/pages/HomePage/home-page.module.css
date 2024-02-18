@@ -1,0 +1,37 @@
+.container {
+  text-align: center;
+}
+
+.title {
+  margin-top: 80px;
+  font-size: 46px;
+  color: #585757;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 3px 1px 3px #92949a;
+}
+
+.h2 {
+  margin-top: 40px;
+  font-size: 36px;
+  color: rgb(109, 154, 180);
+  letter-spacing: 3px;
+}
+
+.img {
+  width: 250px;
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

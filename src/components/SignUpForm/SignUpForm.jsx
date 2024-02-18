@@ -38,9 +38,11 @@ const SignUpForm = ({ onSubmit }) => {
   const { name, email, password } = state;
 
   return (
-    <form autoComplete="off" onSubmit={handleSubmit}>
-      <div className={styles.block}>
-        <label htmlFor={nameId}>Name</label>
+    <form autoComplete="off" onSubmit={handleSubmit} className={styles.form}>
+      <div className={styles.formGroup}>
+        <label htmlFor={nameId} className={styles.label}>
+          Name
+        </label>
         <input
           value={name}
           onChange={handleChange}
@@ -48,11 +50,14 @@ const SignUpForm = ({ onSubmit }) => {
           id={nameId}
           placeholder="Name"
           minLength={3}
+          className={styles.input}
           required
         />
       </div>
-      <div className={styles.block}>
-        <label htmlFor={emailId}>Email</label>
+      <div className={styles.formGroup}>
+        <label htmlFor={emailId} className={styles.label}>
+          Email
+        </label>
         <input
           value={email}
           onChange={handleChange}
@@ -61,11 +66,14 @@ const SignUpForm = ({ onSubmit }) => {
           id={emailId}
           placeholder="Email"
           autoComplete="username"
+          className={styles.input}
           required
         />
       </div>
-      <div className={styles.block}>
-        <label htmlFor={passwordId}>Password</label>
+      <div className={styles.formGroup}>
+        <label htmlFor={passwordId} className={styles.label}>
+          Password
+        </label>
         <input
           value={password}
           onChange={handleChange}
@@ -75,10 +83,13 @@ const SignUpForm = ({ onSubmit }) => {
           minLength={7}
           placeholder="Password"
           autoComplete="current-password"
+          className={styles.input}
           required
         />
       </div>
-      <button type="submit">Sign Up</button>
+      <button type="submit" className={styles.btn}>
+        Sign Up
+      </button>
     </form>
   );
 };

@@ -36,9 +36,11 @@ const LoginForm = ({ onSubmit }) => {
   const { email, password } = state;
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className={styles.block}>
-        <label htmlFor={emailId}>Email:</label>
+    <form onSubmit={handleSubmit} className={styles.form}>
+      <div className={styles.formGroup}>
+        <label htmlFor={emailId} className={styles.label}>
+          Email:
+        </label>
         <input
           value={email}
           onChange={handleChange}
@@ -46,11 +48,15 @@ const LoginForm = ({ onSubmit }) => {
           name="email"
           id={emailId}
           autoComplete="username"
+          className={styles.input}
+          placeholder="Email"
           required
         />
       </div>
-      <div className={styles.block}>
-        <label htmlFor={passwordId}>Password:</label>
+      <div className={styles.formGroup}>
+        <label htmlFor={passwordId} className={styles.label}>
+          Password:
+        </label>
         <input
           value={password}
           onChange={handleChange}
@@ -58,10 +64,14 @@ const LoginForm = ({ onSubmit }) => {
           name="password"
           id={passwordId}
           autoComplete="current-password"
+          className={styles.input}
+          placeholder="Password"
           required
         />
       </div>
-      <button type="submit">Login</button>
+      <button type="submit" className={styles.btn}>
+        Login
+      </button>
     </form>
   );
 };

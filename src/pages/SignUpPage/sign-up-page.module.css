@@ -16,16 +16,9 @@
   justify-content: center;
 }
 
-.title,
-h2 {
+.title {
   color: #585757;
   text-transform: uppercase;
   letter-spacing: 4px;
   text-shadow: 3px 1px 2px #92949a;
-}
-
-.listWrapper {
-  padding: 15px;
-  border: 1px solid;
-  border-radius: 5px;
 }

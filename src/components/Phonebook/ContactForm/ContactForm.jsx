@@ -39,20 +39,34 @@ const ContactForm = () => {
   return (
     <form id="myForm" onSubmit={handleSubmit} className={styles.form}>
       <div className={styles.formGroup}>
-        <label htmlFor="name">Name</label>
-        <input type="text" name="name" required placeholder="Name" id="name" />
+        <label htmlFor="name" className={styles.label}>
+          Name
+        </label>
+        <input
+          type="text"
+          name="name"
+          required
+          placeholder="Name"
+          id="name"
+          className={styles.input}
+        />
       </div>
       <div className={styles.formGroup}>
-        <label htmlFor="number">Number</label>
+        <label htmlFor="number" className={styles.label}>
+          Number
+        </label>
         <input
           type="tel"
           name="number"
           required
           placeholder="Number"
           id="number"
+          className={styles.input}
         />
       </div>
-      <button type="submit">Add contact</button>
+      <button type="submit" className={styles.btn}>
+        Add contact
+      </button>
     </form>
   );
 };

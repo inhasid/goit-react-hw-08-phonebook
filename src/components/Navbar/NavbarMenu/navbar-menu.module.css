@@ -2,16 +2,20 @@
   list-style: none;
   display: flex;
   justify-content: center;
+  gap: 40px;
 }
 
 .link {
   padding: 10px 15px;
   text-decoration: none;
-  color: #000;
-  font-size: 18px;
+  color: #f9f9f9;
+  font-size: 22px;
+  letter-spacing: 2px;
   font-weight: bold;
+  text-transform: uppercase;
+  justify-content: center;
 }
 
 .link:global(.active) {
-  color: red;
+  color: #585757;
 }

@@ -26,10 +26,16 @@ const ContactList = () => {
   };
 
   const elements = items.map(({ id, name, phone }) => (
-    <li key={id}>
-      {' '}
-      {name}: {phone}{' '}
-      <button onClick={() => handleDeleteContact(id)} type="button">
+    <li key={id} className={styles.item}>
+      <p>
+        {' '}
+        {name}: {phone}{' '}
+      </p>
+      <button
+        onClick={() => handleDeleteContact(id)}
+        type="button"
+        className={styles.btn}
+      >
         Delete
       </button>
     </li>

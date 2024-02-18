@@ -1,5 +1,29 @@
 .block {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: baseline;
+  gap: 20px;
+  position: fixed;
+  top: 12px;
+  right: 20px;
+  text-decoration: none;
+  color: #585757;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn {
+  background: linear-gradient(7deg, #dfdedc, rgb(250, 251, 251));
+  box-shadow: 5px 3px 6px #c4c8d8;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 6px 12px;
+  text-transform: uppercase;
+  color: #585757;
+  font-weight: bold;
+  text-shadow: 1px 0px 1px #92949a;
+  letter-spacing: 2px;
+  font-size: 12px;
 }

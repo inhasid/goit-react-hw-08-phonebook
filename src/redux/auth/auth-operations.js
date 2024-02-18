@@ -45,7 +45,7 @@ export const current = createAsyncThunk(
       const data = await currentRequest(auth.token);
       return data;
     } catch (error) {
-      return rejectWithValue(error.response.data.message);
+      return rejectWithValue(error.message);
     }
   },
   {
