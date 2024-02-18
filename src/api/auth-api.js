@@ -9,16 +9,17 @@ const setToken = token => {
     return (authInstance.defaults.headers.authorization = `Bearer ${token}`);
   }
   authInstance.defaults.headers.authorization = '';
-  console.log(authInstance.defaults.headers.authorization);
 };
 
 export const signupRequest = async body => {
   const { data } = await authInstance.post('/users/signup', body);
+  setToken(data.token);
   return data;
 };
 
 export const loginRequest = async body => {
   const { data } = await authInstance.post('/users/login', body);
+  setToken(data.token);
   return data;
 };
 
@@ -26,7 +27,6 @@ export const currentRequest = async token => {
   setToken(token);
   try {
     const { data } = await authInstance.get('/users/current');
-    console.log(data);
     return data;
   } catch (error) {
     setToken();
@@ -36,7 +36,6 @@ export const currentRequest = async token => {
 
 export const logoutRequest = async () => {
   const { data } = await authInstance.post('/users/logout');
-  setToken();
   return data;
 };
 

@@ -25,14 +25,14 @@ const ContactList = () => {
     dispatch(deleteContact(id));
   };
 
-  const elements = items.map(({ id, name, phone }) => (
-    <li key={id} className={styles.item}>
+  const elements = items.map(({ _id, name, number }) => (
+    <li key={_id} className={styles.item}>
       <p>
         {' '}
-        {name}: {phone}{' '}
+        {name}: {number}{' '}
       </p>
       <button
-        onClick={() => handleDeleteContact(id)}
+        onClick={() => handleDeleteContact(_id)}
         type="button"
         className={styles.btn}
       >
